@@ -1,0 +1,540 @@
+
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+$(document).ready(function () {
+    /* AutoComplete OFF ST */
+    $("form").attr('autocomplete', 'off');
+    $( document ).on( 'focus', ':input', function(){
+        $( this ).attr( 'autocomplete', 'off' );
+    });
+    /* AutoComplete OFF EN */
+
+    $('body').addClass('innerpage');
+
+    var iOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
+    /* Beeinsured to Oneinsure Lightbox Popup ST */
+    $(function () {
+        var loc = window.location.href; // returns the full URL
+        if (/utm_source=beeinsured/.test(loc)) {
+            $('body').addClass('domain_redirected');
+        }
+    });
+    /* Beeinsured to Oneinsure Lightbox Popup EN */
+
+    function reset_menu() {
+        $('#nav li a').removeClass('active').next().hide();
+        $('#nav li a i').removeClass('fa-angle-up').addClass('fa fa-angle-down');
+    }
+
+    /* Navbar JS */
+    $('#hamburger').on("click", function () {
+        $('body').removeClass('active_callmenu active_loginmenu').toggleClass('active_leftmenu');
+        reset_menu();
+    });
+
+    $('.call > a').on('click', function () {
+        $('body').removeClass('active_leftmenu active_loginmenu').toggleClass('active_callmenu');
+    });
+
+    $('.account > a').on("click", function () {
+        $('body').removeClass('active_leftmenu active_callmenu').toggleClass('active_loginmenu');
+    });
+
+    $('.lightbox').on('click', function () {
+        $('body').removeClass('active_leftmenu active_callmenu active_lightbox active_loginmenu domain_redirected');
+        $('.lightbox').removeClass('.lightbox');
+        $('.contact_number').slideUp(200);
+        $('.account > .dropdown-menu').slideUp(200);
+    });
+
+    $('.dr_close').on('click', function () {
+        $('body').removeClass('domain_redirected');
+    });
+
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (currentScrollPos > 50) {
+            if (prevScrollpos > currentScrollPos) {
+                $("#topnav").css({ top: '0px' });
+                $(".tab_menu_sticky").css({ top: '60px' });
+            } else {
+                $("#topnav").css({ top: '-62px' });
+                $(".tab_menu_sticky").css({ top: '-44px' });
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    }
+
+    $(window).on("scroll", function (e) {
+        if (this.pageYOffset > 1) {
+
+            $('body').addClass('scrollpage').removeClass('active_leftmenu active_callmenu active_loginmenu');
+            $('.blog_page #topnav').addClass('navbar-white');
+            $('.gq_srp_page #topnav').removeClass('trans');
+            
+            if ($(window).width() > 768) {
+
+                $('body').addClass('active_midmenu');
+                reset_menu();
+                $('#hamburger').css("visibility", "hidden");
+                //$('body').removeClass('active_leftmenu').find('#nav li a').removeClass('active');
+                $('body').removeClass('active_rightmenu active_callmenu active_loginmenu');
+            } else {
+                //$('body').removeClass('mid_menu');
+                $('#hamburger').css("visibility", "visible");
+            }
+        }
+        else {
+            $('body').removeClass('scrollpage active_leftmenu active_midmenu active_callmenu active_loginmenu');
+            $('.blog_page #topnav').removeClass('navbar-white');
+            $('.gq_srp_page #topnav').addClass('navbar-white trans');
+            $('#hamburger').css("visibility", "visible");
+        }
+    });
+
+    /* Menu Accordian JS */
+    $('#nav > li > a').click(function () {
+        if ($(this).attr('class') != 'active') {
+            $('#nav li ul').slideUp('fast');
+            $(this).next().addClass('arrow_top_center').slideToggle('fast');
+            $('#nav li a').removeClass('active').find('i').removeClass('fa-angle-up').addClass('fa fa-angle-down');
+            $(this).addClass('active').find('i').removeClass('fa-angle-down').addClass('fa fa-angle-up');
+        }
+        else {
+            $(this).next().slideToggle('fast');
+            $(this).removeClass('active').find('i').removeClass('fa-angle-up').addClass('fa fa-angle-down');
+        }
+    });
+
+
+    $("body").click(function () {
+        $("#nav > li > a").next().slideUp('fast');
+        $("#nav > li > a").removeClass('active').find('i').removeClass('fa-angle-up').addClass('fa fa-angle-down');
+    });
+
+    $('#nav > li > a').click(function (e) {
+        e.stopPropagation();
+    });
+
+
+    $(function () {
+        $('.gq_srp_page #topnav').addClass('navbar-white trans');
+
+        if ($(window).width() < 768) {
+            $(".block2").addClass('footer_nav');
+            $("#home-wrap").addClass('h_header_accordian');
+            
+            $('.h_header_accordian .content-box-wrapper .content-box-hover h3.active').next().slideToggle();
+
+            /* Accordian in Responsive ST */
+            $('.h_header_accordian .content-box-wrapper .content-box-hover h3').click(function () {
+
+                if ($(this).attr('class') != 'active') {
+                    $('.content-box-hover > .accord_content').slideUp();
+                    $('h3').removeClass('active');
+                    $('h3 span').hide();
+                    $(this).addClass('active').next().slideToggle();
+                }
+                else {
+                    $(this).removeClass('active').next().slideToggle();
+                    $('.content-box-wrapper > i').hide();
+                    $('h3 span').hide();
+                }
+            });
+
+        } else {
+            $(".block2").removeClass('footer_nav');
+            $("#home-wrap").removeClass('h_header_accordian');
+        }
+
+        $('.footer_nav > li > h4').click(function () {
+            if ($(this).attr('class') != 'active') {
+                $('.footer_nav li ul').slideUp();
+                $(this).next().slideToggle();
+                $('.footer_nav li h4').removeClass('active');
+                $(this).addClass('active');
+            }
+            else {
+                $(this).next().slideToggle();
+                $(this).removeClass('active');
+            }
+        });
+
+        /* POS POPUP ST */
+        $('.pos_popbtn').click(function () {
+            $('body').addClass('pos_popup');
+        });
+        /* POS POPUP EN */
+
+    });
+
+    /* Hide Tint for IOS Mobile */
+    if (!iOS) {
+        $('.toolbar').hover(
+            function () {
+                $(this).siblings().removeClass('active').addClass('tint');
+                $(this).removeClass('tint').addClass('active');
+            },
+            function () {
+                $('.toolbar').removeClass('active tint');
+            }
+        );
+    }
+});
+
+$(function () {
+
+    /* Hide CTA on Claims Page with UTM ST */
+    $(function () {
+        var loc = window.location.href; // returns the full URL
+        if (/redirected-from-campaign_claims/.test(loc)) {
+            $(".call-to-action .blog_sticky.cta-sticky").attr('style','display:none !important');
+        }
+    });
+    /* Hide CTA on Claims Page with UTM ST */
+
+    /* Retirement Popup ST */
+    $(function () {
+        var loc = window.location.href; // returns the full URL
+        if (/life-insurance\/retirement/.test(loc)) {
+            $('body').addClass('retirement_popup');
+        }
+    });
+    /* Retirement Popup EN */
+
+    /* Interstitial Popup ST 
+    $(function () {
+        var loc = window.location.href;
+        var hideInterstitial = getCookie("HideInterstitial");
+        console.log(hideInterstitial);
+        if (hideInterstitial)
+        {
+            $('body').removeClass('show_interstitial'); 
+        }
+        else {
+            if (/V5/.test(loc) || /faq/.test(loc) || /faq-category/.test(loc) || /life-insurance\//.test(loc) || /health-insurance\//.test(loc) || /car-insurance\//.test(loc) || /travel-insurance\//.test(loc) || /knowledge\//.test(loc) || /insurerclaims\//.test(loc)) {
+                $('body').addClass('show_interstitial');
+                $('.interstitial').removeClass('fadeOutLeft').addClass('fadeInLeft');
+            }
+            else {
+                if (/life-insurance\/term/.test(loc) || /life-insurance\/moneyback/.test(loc) || /life-insurance\/child-plan/.test(loc) || /life-insurance\/retirement/.test(loc) || /buy.oneinsure.com/.test(loc)) {
+                    $('body').removeClass('show_interstitial');
+                    $('.interstitial').removeClass('fadeInLeft').addClass('fadeOutLeft');
+                }
+            }
+        }
+        
+        $('.interstitial a.i_close').click(function () {
+            $('.interstitial').removeClass('fadeInLeft').addClass('fadeOutLeft');
+            setCookie('HideInterstitial', true, 1)
+        });
+    });
+    /* Interstitial Popup EN */
+
+    /*Cookie Function ST*/
+
+    function setCookie(cname, cvalue, exdays) {
+        var d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        var expires = "expires=" + d.toGMTString();
+        console.log(expires);
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+   
+
+    /* Cookie Function EN */
+
+});
+
+/* Call To Action ST */
+$(function () {
+        var loc = window.location.href; // returns the full URL
+        if (/health-insurance\//.test(loc) || /car-insurance\//.test(loc) || /travel-insurance\//.test(loc) || /faq\//.test(loc) || /faq-category\//.test(loc) || /insurerclaims\//.test(loc)) {
+            $('body').addClass('call-to-action');
+        }
+        else if (/life-insurance\/term/.test(loc) || /life-insurance\/moneyback/.test(loc) || /life-insurance\/child-plan/.test(loc) || /life-insurance\/retirement/.test(loc)) {
+            $('body').removeClass('call-to-action');
+        }
+
+        /* CTA UTM Lead ST */
+        if (/utm_content=lead/.test(loc)) {
+            $('body').addClass('utm_lead');
+        }
+        else {
+            $('body').removeClass('utm_lead');
+        }
+        
+        if (/insurerclaims\//.test(loc)) {
+            $(".panel-title a").attr("aria-expanded", "true").removeClass("collapsed");
+            $("#collapse2").attr("aria-expanded", "true").addClass("in");
+        }
+        /* CTA UTM Lead EN */
+    });
+
+    // <![CDATA[
+    $(document).ready(function () {
+        $('#txtname').val('');
+        $('#txtage').val('');
+        $('#txtContactNumber').val('');
+        /*$('#txtemail').val('');*/
+
+        $.validator.addMethod(
+            "regex",
+            function (value, element, regexp) {
+                return this.optional(element) || regexp.test(value);
+            }
+            );
+        $.validator.addMethod(
+            "characteronly",
+            function (value, element, regexp) {
+                return this.optional(element) || regexp.test(value);
+            });
+
+        $("#frmDetails").validate({
+            rules: {
+                txtContactNumber: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 10,
+                    number: true,
+                    regex: /^[789]\d{9}$/i
+                },
+                /*txtemail: {
+                    required: true,
+                    email: true,
+                    regex: /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+                },*/
+                txtname: {
+                    required: true,
+                    characteronly: /^[a-z\s\b]+$/i
+                },
+                txtage: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 2,
+                    number: true
+                },
+            },
+            messages: {
+            },
+        });
+
+        $("#frmDetailsHelp").validate({
+            rules: {
+                txtContactNumber: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 10,
+                    number: true,
+                    regex: /^[789]\d{9}$/i
+                },
+                /*txtemail: {
+                    required: true,
+                    email: true,
+                    regex: /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+                },*/
+                txtname: {
+                    required: true,
+                    characteronly: /^[a-z\s\b]+$/i
+                },
+                txtage: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 2,
+                    number: true
+                },
+            },
+            messages: {
+            },
+        });
+
+        $("#frmDetailsCalc").validate({
+            rules: {
+                txtContactNumber: {
+                    required: true,
+                    minlength: 10,
+                    maxlength: 10,
+                    number: true,
+                    regex: /^[789]\d{9}$/i
+                },
+                /*txtemail: {
+                    required: true,
+                    email: true,
+                    regex: /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+                },*/
+                txtname: {
+                    required: true,
+                    characteronly: /^[a-z\s\b]+$/i
+                },
+                txtage: {
+                    required: true,
+                    minlength: 1,
+                    maxlength: 2,
+                    number: true
+                },
+            },
+            messages: {
+            },
+        });
+
+        $('button#trans_btn').on("click", function () {
+          $('body').addClass('filter_active');
+          $('.panel_sec').removeClass('fadeOutUp').addClass('animated fadeInDown');
+      });
+
+        $('button#fltr_head').on("click", function () {
+          $('.panel_sec').removeClass('fadeInDown').addClass('animated fadeOutUp');
+          setTimeout(function () { $('body').removeClass('filter_active'); }, 800);
+
+      });
+    });
+
+    $('#txtname').keypress(function (e) {
+        var regex = new RegExp("^[a-zA-Z\\s\\b]+$");
+        var str = String.fromCharCode(!e.charCode ? e.which : e.charCode);
+        if (regex.test(str)) {
+            return true;
+        }
+        else {
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    function hideCallus() {
+        $('.call-us').hide();
+        $('.list-group-item:first-child').addClass("hide");
+        $('.list-group-item:nth-child(2)').removeClass("hide");
+    }
+
+    var regex = /^[a-zA-Z\s\x08\?]$/;
+    $("#txtContactNumber").keypress(function (event) {
+        var _event = event || window.event;
+        var key = _event.keyCode || _event.which;
+
+        key = String.fromCharCode(key);
+
+        if (regex.test(key)) {
+            _event.returnValue = false;
+            if (_event.preventDefault)
+                _event.preventDefault();
+        }
+    });
+
+    function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+
+    function savecustomerdetails(formType) {
+        var form;
+        var form_name;
+
+        if (formType == 1) {
+            form = $('#frmDetails');
+            form_name = "?form-name=compare-buy-form";
+        }else if(formType == 2) {
+            form = $('#frmDetailsHelp');
+            form_name = "?form-name=term-banner-form";
+        }
+        else if(formType == 3) {
+            form = $('#frmDetailsCalc');
+            form_name = "?form-name=calculator-form";
+        }
+        form.validate();
+        
+        var isValid = form.valid();
+        
+        if (isValid) {
+          var url = window.location.href;
+          var title = document.title;
+            // var contactno = $('#txtContactNumber').val();
+            // var custname = $('#txtname').val();
+            // var custage = $('#txtage').val();
+            // var custcity = $('#txtcity').val();
+            var contactno = form.find('#txtContactNumber').val();
+            var custname = form.find('#txtname').val();
+            var custage = form.find('#txtage').val();
+            var custcity = form.find('#txtcity').val();
+            /*var custmail = $('#txtemail').val();*/
+
+            var customerdetails = "Contact No : " + contactno + ", Name : " + custname + ", Age :" + custage + ",  City :" + custcity;
+            var customerdata = {
+                "PageName": title, "PageUrl": url+form_name, "PageData": customerdetails
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "/kyp/CustomerServices.svc/SaveCustomerDetails",
+                data: JSON.stringify(customerdata),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    if (data && data.SaveCustomerDetailsResult) {
+                        if (isValidURL(data.SaveCustomerDetailsResult.Response))
+                            window.location.href = data.SaveCustomerDetailsResult.Response;
+                        else {
+                            //window.location.href = "/campaign/life/thank-you.html";
+                            $('#form_body').addClass('hide');
+                            // $('.frm-details h3').removeClass('hide');
+                            $(form).find('.row').addClass('hide');
+                            $(form).find('h3').removeClass('hide');
+                            $('.term-form').hide();
+                            $('.term-thanks').removeClass('hide').show();
+                        }
+                    }
+                    
+                },
+                error: function (error) {
+
+                }
+            });
+            return false;
+        }
+    }
+    function isValidURL(url) {
+        var RegExp = /(http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+        if (RegExp.test(url)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    // ]]>
+    /* Call To Action EN */
+
+    /* Nav Back URL ST */
+    function navBack() {
+        var loc = window.location.href; // returns the full URL
+        if (/oneinsure\.com\/car-insurance\/search/.test(loc) || /oneinsure\.com\/two-wheeler\/search/.test(loc)) {
+            window.history.back();
+        }
+        else if (/oneinsure\.com\/car-insurance/.test(loc) || /oneinsure\.com\/car-insurance\/get-quote/.test(loc) || /oneinsure\.com\/two-wheeler/.test(loc) || /oneinsure\.com\/two-wheeler\/get-quote/.test(loc)) {
+            var navBackUrl = "/career/mobilelanding";
+            window.location = navBackUrl;
+        }
+
+    }
+/* Nav Back URL EN */
+
+/* POS Dashboard Link ST */
+var broserLink = 'https://www.oneinsure.com/mobilelanding/mobilelanding.aspx?poscode=@@UserId@@&mobilehome=1';
+function openBrowser() {
+    window.location = broserLink.replace('@@UserId@@', getCookie('userid'));
+}
+/* POS Dashboard Link EN */

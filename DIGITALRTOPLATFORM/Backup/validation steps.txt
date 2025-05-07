@@ -1,0 +1,65 @@
+Step 1: Add following span code for all the form label
+<span id="id..."></span>
+
+Step 2: Inside form tag add following code- 
+onsubmit="return validateform()"
+
+Step 3: Create javascriptfunction to validate form
+<script>
+function validateform()
+{
+	var numericExpression = /^[0-9]+$/;
+	var alphaExp = /^[a-zA-Z]+$/;
+	var alphaspaceExp = /^[a-zA-Z\s]+$/;
+	var alphaNumericExp = /^[0-9a-zA-Z]+$/;
+	var emailExp = /^[\w\-\.\+]+\@[a-zA-Z0-9\.\-]+\.[a-zA-z0-9]{2,4}$/;
+	
+	var validateform="true";
+	$( ".classvalidate" ).empty();
+	
+	//Coding to validate alpabets and space expressions
+	if(!document.getElementById("name").value.match(alphaspaceExp))
+	{
+		document.getElementById("idname").innerHTML="Name should contain alphabets and characters...";
+		validateform="false";
+	}
+	
+	//Coding to validate empty record
+	if(document.getElementById("name").value=="")
+	{
+		document.getElementById("idname").innerHTML="Name Should not be empty...";
+		validateform="false";
+	}
+	
+	//Coding to validate email id expressions
+	if(!document.getElementById("emailid").value.match(emailExp))
+	{
+		document.getElementById("idemailid").innerHTML="Entered Email ID is not in a valid format....";
+		validateform="false";
+	}
+		
+	//Coding to validate Password and Confirm Password
+	if(document.getElementById("password").value != document.getElementById("cpassword").value)
+	{	
+		document.getElementById("idpassword").innerHTML="Password and Confirm password not matching...";
+		validateform="false";
+	}
+	
+	//Coding to validate length
+	if(document.getElementById("password").value.length <6)
+	{
+		document.getElementById("idpassword").innerHTML="Password Should contain more than 6 characters...";
+		validateform="false";
+	}
+	   
+	//If the condition is true then it executes form statement else it returs false...
+	if(validateform=="true")
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+</script>

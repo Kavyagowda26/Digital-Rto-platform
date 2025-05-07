@@ -1,0 +1,95 @@
+		$(document).ready(function()
+		{ 
+			VisitorTracking();
+		})
+		
+		//var  apiUrl = "http://api.devsite.com";
+		var apiUrl = "https://www.oneinsure.com/servicesapiv6";
+
+		function VisitorTracking() 
+		{
+			var visitorId = getCookie('visitorid');
+			if(visitorId == "" || visitorId == null)
+			{
+				$.ajax(
+				{
+					type:"POST",
+					url: apiUrl+"/api/mpc/GetVisitorsDetails", 
+					contentType: "application/json; charset=utf-8",
+					success: function (data) 
+					{ 
+ 					console.log(data);
+					
+						if(data!=null)
+						{
+							var details =  JSON.parse(data);
+							 
+							setCookie("activityDto",data);
+							setCookie("visitorid",details.VisitorId);
+						}
+					}	
+					
+				})
+			}
+			else
+			{
+				var activity =  getCookie('activityDto');
+				console.log("activity",activity); 
+				$.ajax(
+				{
+					type:"POST",
+					url: apiUrl+"/api/mpc/AddUserActivityLogs", 
+					data:activity,
+					contentType: "application/json; charset=utf-8",
+					success: function (data) 
+					{ 
+					
+					  console.log("Saved Successfully");
+					}
+				
+				
+				})
+			}
+			
+			
+		
+		}
+		
+		// CookieFunctionality
+		
+		function setCookie(cname, cvalue, exdays) 
+		{
+			var d = new Date();
+			d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+			var expires = "expires="+d.toUTCString();
+			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/;domain=.oneinsure.com";
+		}
+		
+		function getCookie(cname) 
+		{
+			var name = cname + "=";
+			var ca = document.cookie.split(';');
+			for(var i = 0; i < ca.length; i++) {
+				var c = ca[i];
+				while (c.charAt(0) == ' ') {
+					c = c.substring(1);
+				}
+				if (c.indexOf(name) == 0) {
+					return c.substring(name.length, c.length);
+				}
+			}
+			return "";
+		}
+		
+		function checkCookie() 
+		{
+			var user = getCookie("username");
+			if (user != "") {
+				alert("Welcome again " + user);
+			} else {
+				user = prompt("Please enter your name:", "");
+				if (user != "" && user != null) {
+					setCookie("username", user, 365);
+				}
+			}
+		}

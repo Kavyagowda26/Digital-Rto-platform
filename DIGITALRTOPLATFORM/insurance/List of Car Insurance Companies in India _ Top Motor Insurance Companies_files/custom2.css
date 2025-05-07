@@ -1,0 +1,920 @@
+.projection-page:not(.m_item) > header > h1{
+	font-family: "Helvetica Neue";
+	font-size: 36px;
+	line-height: 42px;
+	text-align: center;
+	padding: 30px 0 22px 0;
+	color: #f5732b !important;
+	text-align: center;
+	text-transform:capitalize;	
+}
+.projection-page.m_item > header > h1{cursor:normal !important;}
+/* .manage-actions{
+border-bottom: 1px solid #e1e1e1;
+}
+.zone-content>.content-control >.manage-actions, .first >.content-control >.manage-actions{
+border-bottom:1px solid transparent;
+} */
+.faq-category-term .LHS_cont ul li.last {
+    border-bottom: 1px solid transparent;
+}
+.faq-category-term .LHS_cont ul li {
+    border-bottom: 1px solid #e1e1e1;
+}
+
+ .pink-bg
+        {
+            background-color:transparent !important;
+        }
+		
+/* Blog style ST */
+.widget-search-form, .widget-Categories, .widget-FaqCategories,.widget-BlogCategories, 
+.widget-Categories ul.menu,.widget-FaqCategories ul.menu,.widget-BlogCategories ul.menu,
+ .widget-Categories ul.menu > li,.widget-FaqCategories ul.menu > li,.widget-BlogCategories ul.menu > li {float: none !important;}
+
+.widget-Categories ul.menu > li > a,.widget-FaqCategories ul.menu > li > a,.widget-BlogCategories ul.menu > li > a{padding: 3px 0px !important; color: #a4a4a4;}
+ul.content-items,ul.blog-posts, ul.list-Comments {list-style: none;padding: 0px;}
+ul.list-Comments > li{border-bottom: 1px solid #DEDEDE;background-color: #F7F7F7;padding: 10px; }
+ul.list-Comments > li p{margin:4px 0px;}
+/* Blog style ET */
+
+.menu-top-menu > li p.menusaperator {
+    margin: 0px;
+    padding: 12px 0 0 0;
+}
+
+.sharebar-wrapper{padding: 20px 0;}
+.post_extras{margin-top:30px;}
+.slider_home .proceed-btn:hover{
+background:#fff;
+color:#ff7529;
+
+
+}
+.slider_home .proceed-btn:active{
+background:#fff;
+color:#ff7529;
+
+
+}
+.slider_home .proceed-btn{
+	border: none;
+	}
+
+/* FAQs ST */
+	.faqs{padding-bottom: 50px;}
+	.faqs_list{max-width: 95%; margin: 20px auto 0px auto; width: 1000px; padding-bottom:20px;}
+	.masonry {
+		/* DOnt remove This */
+        margin-bottom: 30px;
+	}
+
+	.m_item {
+		width: 230px;
+		float: left;
+		margin: 20px 10px; 
+		padding:0;
+		position:relative;
+		display: block;
+		background: #7B797A;
+		color: #fff;
+		cursor: default !important;
+		transition: all 0.5s ease 0s;
+		-webkit-transition: all 0.5s ease 0s;
+		-moz-transition: all 0.5s ease 0s;
+		-ms-transition: all 0.5s ease 0s;
+		-o-transition: all 0.5s ease 0s;
+
+		-webkit-box-shadow: inset 10px 10px 20px -8px rgba(50,50,50,0.75) !important;
+		-moz-box-shadow: inset 10px 10px 20px -8px rgba(50,50,50,0.75) !important;
+		box-shadow: inset 10px 10px 20px -8px rgba(50,50,50,0.75) !important;
+
+		border-radius: 5px;
+	}
+		
+	.m_item:hover,
+	.m_item.on{
+		position:relative;
+		display: block;
+		background: #53637c;
+		color: #fff;
+		-webkit-box-shadow: inset 10px 10px 20px -8px rgba(50,50,50,0.75) !important;
+		-moz-box-shadow: inset 10px 10px 20px -8px rgba(50,50,50,0.75) !important;
+		box-shadow: inset 10px 10px 20px -8px rgba(50,50,50,0.75) !important;
+	}
+		.faqs_org .m_item:hover,
+		.faqs_org .m_item.on{
+			background: #ff8540;
+		}
+
+	.m_item .faq_q, .m_item > header{
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 20px;
+		padding: 15px;
+		border-bottom: 1px solid #dfdfdf;
+	}
+
+    .m_item > header > h1{
+        font-size: 18px;
+        margin: 0px;
+        font-weight:bold;
+    }
+
+	.m_item .faq_a{
+		padding: 8px 15px 4px;
+		color: #fff;
+	}
+
+	.m_item:hover .faq_q,
+	.m_item.on .faq_q{
+		border-bottom: 1px solid #758296;
+	}
+		.faqs_org .m_item:hover .faq_q,
+		.faqs_org .m_item.on .faq_q{
+			border-bottom: 1px solid #ff9d66;
+		}
+
+        .m_item .faq-heading {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.m_item .faq-body {
+    padding: 15px;
+    color: #fff;
+}
+
+.m_item:hover .faq-heading,
+.m_item.on .faq-heading {
+    border-bottom: 1px solid #758296;
+}
+
+.faqs_org .m_item:hover .faq-heading,
+.faqs_org .m_item.on .faq-heading {
+    border-bottom: 1px solid #ff9d66;
+}
+
+
+
+	.faq_num {
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    color: #a5a5a5;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 32px;
+    top: -15px;
+    right: 24px;
+    background: url("/assets/bi/images/home/faq.png") no-repeat;
+}
+
+.m_item:hover .faq_num,
+.m_item.on .faq_num {
+    color: #53637c;
+    background: url("/assets/bi/images/home/faq-on.png") no-repeat;
+}
+
+.faqs_org .m_item:hover .faq_num,
+.faqs_org .m_item.on .faq_num {
+    color: #53637c;
+    background: url("/assets/bi/images/home/faq-on-org.png") no-repeat;
+}
+.m_item a{color: #FFFFFF;}
+a.m_item_more{padding: 12px 15px 10px; color:#FFF; display:block; text-align: right; margin-bottom:30px; }
+.m_item p{margin: 0 0 15px;}
+.projection-page .m_item:hover, .projection-page .m_item.on {background: #ff8540;}
+.projection-page .m_item:hover .faq_q, .projection-page .m_item.on .faq_q {border-bottom: 1px solid #ff9d66;}
+	/* FAQs EN */
+
+    
+	/* FAQs PG ST */
+		.faqs .LHS_cont{
+			padding-left:;
+			padding-right: 50px;
+		}
+		.faq-list{display: table-row; width: 98%;}
+		.faq-list .faq-heading,
+		.faq-list .faq-body{
+			display: table-row;
+		}
+		.faq-list .faq-heading > div,
+		.faq-list .faq-body > div{
+			display: table-cell;
+		}
+		.faq-list .faq-heading > div:nth-child(1),
+		.faq-list .faq-body > div:nth-child(1){
+			max-width: 5%;
+			width: auto !important;
+			font-weight: 600;
+		}
+		.faq-list .faq-heading > div:nth-child(2),
+		.faq-list .faq-body > div:nth-child(2){
+			font-weight: normal;
+		}
+		.faq-list .faq-heading > div{
+			padding: 20px 0 12px 0;
+			margin:0;
+			color: #f6732b;
+			font-weight: 600;
+			font-size: 24px;
+			line-height: 1.2em;
+		}
+		.faq-list .faq-body > div{
+			padding: 0 10px 0px 0;
+			color: #454444;
+			font-size: 16px;
+			line-height: 1.2em;
+			//border-bottom: 1px solid #e1e1e1;
+		}
+			.faq-list .faq-body > div p{
+				padding: 0 0 15px 0;
+				margin:0; 
+			}
+		.faq-list .faq-heading a{
+			color: #f6732b;
+		}
+		.faq-list .faq-body a{
+			color: #67b5c2;
+			text-decoration: none;
+		}
+		.faq-list .faq-body a:hover{
+			text-decoration: underline;
+		}
+		.faqs .LHS_cont .post_nav {
+			margin: 30px 0 0 0; 
+		}
+
+
+.faqs_org article.projection-page > header, .home_posts article.projection-page > header{display: none !important;}
+	/* FAQs PG EN */
+
+/* Homepage blogposts ST */
+.home_posts .post_image{margin-right: 10px;}
+.home_posts .post{margin-bottom:10px;}
+.home_posts .posts > div{padding-bottom: 0px;}
+.home_posts p, .home_posts .post > .row{margin: 0 0 10px;}
+/* Homepage blogposts EN */
+
+/* About Us PG ST */
+	.aboutus_page .page-content > .row:nth-child(1){
+		margin: 0 -20px;
+		box-shadow: 0px 18px 33px -1px #999999;
+		-webkit-box-shadow: 0px 18px 33px -1px #999999;
+		-moz-box-shadow: 0px 18px 33px -1px #999999;
+	}
+	.aboutus_page .aboutus_tabs{background-color: #b8b8b9; min-height: 616px; position: relative;}
+	.aboutus_page .aboutus_tabs .tab-content{
+		color: #011628; font-size: 20px; font-weight: 400;line-height: 1.2em;
+		width: 50%;
+		position: absolute;
+		height: 616px;
+		background: url("/assets/bi/images/home/about/tabs-cont-bg.png") no-repeat 0px 30px;
+	}
+	.aboutus_page .aboutus_tabs .tab-content .tab-pane{
+		position: relative;
+		top: 140px;
+		left: 93px;
+		height: 325px;
+		width: 320px;
+		overflow-y: auto;
+	}
+	
+	.aboutus_tabs ul#tab {
+	    position: absolute;
+	    right: 65px;
+	    margin: 0;
+	    padding: 0;
+	    list-style: none;
+	    display: inline-block;
+	    float: right;
+	    -webkit-transform-origin: 0 0;
+	       -moz-transform-origin: 0 0;
+	         -o-transform-origin: 0 0;
+	            transform-origin: 0 0;
+	    -webkit-transform: rotate(-90deg) translate(-488px, 0px);
+	       -moz-transform: rotate(-90deg) translate(-488px, 0px);
+	         -o-transform: rotate(-90deg) translate(-488px, 0px);
+	            transform: rotate(-90deg) translate(-616px, 0px);
+	    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+	}
+	.aboutus_tabs ul#tab li {
+	    display: block;
+	    width: 616px;
+	    height: 130px;
+	    text-align: center;
+	}
+	
+	.aboutus_tabs ul#tab li a {
+	    display: block;
+	    width: 100%;
+	    height: 100%;
+	    padding: 10px 0 0 150px;
+	    font-size: 50px;
+	    line-height: 1em;
+	    font-weight: 600;
+	    text-decoration: none;
+	    background: url("/assets/bi/images/home/about/tab1.jpg") no-repeat top center;
+	}
+
+	.aboutus_tabs ul#tab li:nth-child(1) a{color: #569505;background: url("/assets/bi/images/home/about/tab1.jpg") no-repeat top center;}
+	.aboutus_tabs ul#tab li:nth-child(2) a{color: #940c00;background: url("/assets/bi/images/home/about/tab2.jpg") no-repeat top center;}
+	.aboutus_tabs ul#tab li:nth-child(3) a{color: #00a6c8;background: url("/assets/bi/images/home/about/tab3.jpg") no-repeat top center;}
+	.aboutus_tabs ul#tab li:nth-child(4) a{color: #550161;background: url("/assets/bi/images/home/about/tab4.jpg") no-repeat top center;}
+	.aboutus_tabs ul#tab li:nth-child(5) a{color: #d73d00;background: url("/assets/bi/images/home/about/tab5.jpg") no-repeat top center;}
+
+	.aboutus_tabs ul#tab li.active:nth-child(1) a,
+	.aboutus_tabs ul#tab li:nth-child(1) a:hover{background: url("/assets/bi/images/home/about/tab1-on.jpg") no-repeat top center;}
+	.aboutus_tabs ul#tab li.active:nth-child(2) a,
+	.aboutus_tabs ul#tab li:nth-child(2) a:hover{background: url("/assets/bi/images/home/about/tab2-on.jpg") no-repeat top center;}
+	.aboutus_tabs ul#tab li.active:nth-child(3) a,
+	.aboutus_tabs ul#tab li:nth-child(3) a:hover{background: url("/assets/bi/images/home/about/tab3-on.jpg") no-repeat top center;}
+	.aboutus_tabs ul#tab li.active:nth-child(4) a,
+	.aboutus_tabs ul#tab li:nth-child(4) a:hover{background: url("/assets/bi/images/home/about/tab4-on.jpg") no-repeat top center;}
+	.aboutus_tabs ul#tab li.active:nth-child(5) a,
+	.aboutus_tabs ul#tab li:nth-child(5) a:hover{background: url("/assets/bi/images/home/about/tab5-on.jpg") no-repeat top center;}
+
+	.aboutus_page .page-content > .row:nth-child(2){
+		background: url("/assets/bi/images/home/about/triangle-bg.jpg") no-repeat center bottom;
+		padding-bottom: 80px;
+		margin: 0 -20px;
+	}
+	
+		.org_block{
+			background: #fff url("/assets/bi/images/home/about/org-bg.gif") no-repeat center center;
+			width: 664px;
+			margin: 0 auto;
+		}
+		.org_square {
+			position: relative;
+			background-color: #f5732b;
+			font-size: 35px;
+			color: #fff;
+			height: 322px;
+			width: 322px;
+			margin: 5px;
+			padding: 40px;
+			float: left;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+
+		}
+			.org_square .num{
+				width: 86px;
+				height: 86px;
+				position: absolute;
+				z-index: 3;
+				background-color: #fff;
+				color: #f5732b;
+				font-size:86px;
+				line-height: 1em;
+				font-weight: 600;
+
+				bottom: 0;
+				right: 0;
+			}
+			.org_square:nth-child(2) .num{
+				bottom: 0;
+				left: 0;
+			}
+			.org_square:nth-child(3) .num{
+				top: 0;
+				right: 0;
+			}
+			.org_square:nth-child(4) .num{
+				top: 0;
+				left: 0;
+			}
+			.white_box{
+				position: absolute;
+				z-index: 4;
+				top:0px;
+				left: 0px;
+				width: 332px;
+				height: 332px;
+				color: #444444;
+				background: #fff;
+				font-size:17px;
+				border: 10px solid #f6732b;
+				padding: 10px;
+				display: none;
+			}
+			.org_square:nth-child(2) > .white_box{
+				left:-10px;
+			}
+			.org_square:nth-child(3) > .white_box{
+				top: -10px;
+			}
+			.org_square:nth-child(4) > .white_box{
+				top: -10px;
+				left:-10px;
+			}
+			.org_square:hover > .white_box{
+				display: block;
+			}
+	.aboutus_page .page-content > .row:nth-child(3){
+		background: #fdf1ff;
+		padding-bottom: 50px;
+		margin: 0 -20px;
+	}
+		.aboutus_page .page-content > .row:nth-child(3) .col-md-3{text-align: center;}
+		.person_block{margin-bottom: 35px; display: inline-block;}
+		.person_block .img_block{
+			position: relative;
+			display: inline-block;
+			-webkit-box-shadow: 5px 0px 10px 0px rgba(50, 50, 50, 0.7);
+			-moz-box-shadow:    5px 0px 10px 0px rgba(50, 50, 50, 0.7);
+			box-shadow:         5px 0px 10px 0px rgba(50, 50, 50, 0.7);
+		}
+		.person_block .img_block > div{display: none;}
+		.person_block:hover .img_block > div{
+			position: absolute;
+			top:0;
+			display: block;
+			background: #000;
+			color: #fff;
+			opacity: .8;
+    		filter: alpha(opacity=70);
+    		width: 100%;
+    		height: 100%;
+    		padding: 15px 20px 0 20px;
+    		line-height: 1.2em;
+		}
+		.person_block .img_block:hover > div > div:first-child{
+			cursor: default;
+		}
+		.person_block .helv24{text-align: left !important; margin-top: 15px;}
+		.person_block .helv24 + p{margin: 5px 0; font-size: 14px;text-align: left;}
+
+	.aboutus_page .page-content > .row:nth-child(4){
+		background: url("/assets/bi/images/home/about/triangle-bg.jpg") no-repeat center bottom;
+		padding-bottom: 120px;
+		margin: 0 -20px;
+	}
+
+	.v-center{
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		display: inline-block;
+	}
+    /* .aboutus_page{margin: 0 -5px;} */
+	/* About Us PG EN */
+	
+	/* Sidebar UL ST */
+	    .sidebar-faq-list{    margin: 0px;
+    padding: 10px 10px 25px;
+    list-style: none;}
+	
+ul.sidebar-faq-list > li:hover > a{text-decoration:none; }
+ul.sidebar-faq-list > li {
+    border-bottom: 1px solid #DDD;
+    padding: 6px 6px;
+}
+	/* Sidebar UL EN */
+	
+	/* Homepage ST */
+	.p_services .card-desc > ol {
+    text-align: left !important;
+    margin: 8px 10%;
+}
+
+.proceed-btn, .proceed-btn:hover, .proceed-btn.active{
+background: #ff7529;
+border-color: #ff7529;
+}
+
+/* Partners ST */
+.p_logo a.p1 {
+            background: #fff url("/assets/bi/images/insurer/aegon/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p1:hover {
+                background: #fff url("/assets/bi/images/insurer/aegon/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p2 {
+            background: #fff url("/assets/bi/images/insurer/bajajlife/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p2:hover {
+                background: #fff url("/assets/bi/images/insurer/bajajlife/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p3 {
+            background: #fff url("/assets/bi/images/insurer/bharti/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p3:hover {
+                background: #fff url("/assets/bi/images/insurer/bharti/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p4 {
+            background: #fff url("/assets/bi/images/insurer/bhartil-genral/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p4:hover {
+                background: #fff url("/assets/bi/images/insurer/bhartil-genral/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p5 {
+            background: #fff url("/assets/bi/images/insurer/CignaTTK/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p5:hover {
+                background: #fff url("/assets/bi/images/insurer/CignaTTK/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p6 {
+            background: #fff url("/assets/bi/images/insurer/Edelweiss/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p6:hover {
+                background: #fff url("/assets/bi/images/insurer/Edelweiss/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p7 {
+            background: #fff url("/assets/bi/images/insurer/HDFC/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p7:hover {
+                background: #fff url("/assets/bi/images/insurer/HDFC/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p8 {
+            background: #fff url("/assets/bi/images/insurer/hdfcergo/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p8:hover {
+                background: #fff url("/assets/bi/images/insurer/hdfcergo/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p9 {
+            background: #fff url("/assets/bi/images/insurer/iffcotokio/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p9:hover {
+                background: #fff url("/assets/bi/images/insurer/iffcotokio/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p10 {
+            background: #fff url("/assets/bi/images/insurer/LTInsurance/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p10:hover {
+                background: #fff url("/assets/bi/images/insurer/LTInsurance/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p11 {
+            background: #fff url("/assets/bi/images/insurer/MaxLife/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p11:hover {
+                background: #fff url("/assets/bi/images/insurer/MaxLife/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p12 {
+            background: #fff url("/assets/bi/images/insurer/Reliance-genral/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p12:hover {
+                background: #fff url("/assets/bi/images/insurer/Reliance-genral/logo.png") no-repeat;
+                background-position: center;
+            }
+
+        .p_logo a.p13 {
+            background: #fff url("/assets/bi/images/insurer/Religare/logo-gray.png") no-repeat;
+            background-position: center;
+        }
+
+            .p_logo a.p13:hover {
+                background: #fff url("/assets/bi/images/insurer/Religare/logo.png") no-repeat;
+                background-position: center;
+            }
+/* Partners EN */
+
+	/* Homepage ST */
+	
+	 .orchard-layouts-root > div > div:nth-child(5) {
+        margin:0 -20px;
+    }
+    .orchard-layouts-root > div > div:nth-child(5) > .col-md-6{
+		border-bottom: 1px solid #dfdfdf;
+	}
+	
+	#trends1 .projection-title{display:none;}
+	#trendingblock ul.nav{padding: 0px 20px;
+    background: #fff;}
+	.block-2-center-brd, .border_bottom_light_grey{border-bottom: 1px solid #DFDFDF;}
+	.insurer_list{min-height:229px;}
+	
+	        .card-desc{
+            min-height:100px;
+        }
+        .pad1{
+            padding-left:10px !important;
+        }
+       
+        .cd2{
+            height:200px;
+        }
+        .img-pad{
+            padding-top:10px;
+        }
+            .cb_title1{ font-weight:bold !important;
+             }
+        @media(max-width:991px){
+             .f1{
+                 font-size:18px !important;
+                 padding-bottom:15px !important;
+             }
+       
+             .bg1{
+            background-image:url(http:beeinsuredv3.com/Media/Default/extra/arr.png);
+            background-position:center;
+            background-repeat: no-repeat;
+
+        }
+             .pad3{
+               margin-bottom:30px;
+             }
+            .cardicon_margin {
+                margin-left:5%;margin-top: -18px;
+            }
+             .portlet1.light1{display: block;  padding:10px 0 20px; float:left;width:100%;
+                            background:#E5FEFF url(http:beeinsuredv3.com/Media/Default/extra/arr.png) no-repeat 140px bottom;
+             }
+             .card-desc1, .cb_title1{
+                 float:right;
+                 overflow:hidden;
+                 width: 50%;
+                 text-align:left;
+               
+             }
+             .card-icon1{
+                 float:left;
+                 height:auto;
+                 width: 150px;
+                 padding-bottom:20px;  
+                text-align: center !important;               
+             }
+             
+             .ne1{
+                 display:block;
+               background-color:rgb(229,229,229);
+               color:rgb(85,85,85);
+               font-size:18px;
+               font-style:bold;
+                     
+             }
+            
+             .ne2{background-color:rgb(229,229,229);}
+            .r1 {
+                padding: 10px 0px 10px 0px;
+            }
+             
+            .b2{border:1px solid rgb(204,204,204); min-height:80px;}
+
+             
+             .cont{
+                 background-image:none !important;
+             }
+
+        }
+       #carousel{ position: inherit;}
+        .pad {
+            padding: 20px 0 0 20px !important;
+        }
+
+       }
+        @media(min-width:992px) {
+            .card-icon2 {
+                position: absolute;
+                top: 160px;
+            }
+        }
+	 .border_row{
+            border-bottom:3px solid rgb(204,204,204);
+        }
+		
+		 @media(max-width:970px) {
+            .border1 {
+                border-bottom: 1px solid rgb(228,228,228);
+            }
+            .border2{
+                border-left:1px solid rgb(228,228,228);
+            
+            }
+            .bold {
+                font-weight: bold;
+                color: rgb(114,114,114);
+            }
+        }
+		 @media(max-width:600px){
+                .small-slider{
+                    font-size:14px;
+
+                }
+                .hide-text{
+                    display: none!important;
+                }
+                .uplift{
+                    padding:0px 20px 20px 0px !important;
+                }
+                .up{
+                    padding-bottom:50px;
+                }
+                .align{
+                    margin:0 auto;
+                }
+            }
+			 @media(min-width:767px) and (max-width:975px){
+            .cq_cont .cq{
+                width:70px;
+            }
+        }
+         @media(min-width:980px )and (max-width:1200px){
+            .cq_cont .cq {
+                width:90px;
+            }
+        }
+ @media(min-width:450px){.port_height{height:300px!important;}}
+ .p_logo  a >img{  filter: grayscale(100%); -webkit-filter: grayscale(100%); text-align:center; width: 136px; height:58px;}
+
+.p_logo  a >img:hover{ filter: grayscale(0%); -webkit-filter: grayscale(0%); text-align:center;}
+			/* Homepage EN */
+	/* Responsive Design Changes ST */
+
+@media (max-width: 767px) { 
+    .product_page .product_pg_block{background: #FFF; background-image: none;}
+     .insurer_item:hover, .insurer_item { position: relative !important; z-index: 2; border: none; margin: 15px auto 20px; display: block;}
+    .insurer_item img{display: none !important;}
+    .insurer_item .dd_list{display: block !important;}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+@media (min-width: 992px) and (max-width: 1199px) { 
+
+}
+@media (min-width: 1200px) { 
+    
+}
+
+/* Responsive Design Changes EN */
+
+/************** About Us ST *************/ 
+	.aboutus_page .about2{text-align:center;font-size:medium;} 
+	.aboutus_page .about3{font-size:20px;}
+	.aboutus_page .ac{text-align:left;}            
+
+            @media(max-width:768px) {
+                .aboutus_page  .org_square{
+                    width:214px;
+                    height:214px;
+                    font-size:15px;
+                }
+                .aboutus_page  .white_box{
+                    width:214px;
+                    height:214px;
+                    font-size:15px;
+                }
+                .aboutus_page .org_block {background: #fff url("http://beeinsured.com/assets/bi/images/home/about/org-bg.gif") no-repeat 132px center; width:448px !important;}
+
+            }
+          .aboutus_page  #accordion .panel-heading{background-color: #67B5C2 !important; padding: 0px !important;color:white;text-align:center;}
+          .aboutus_page  .w1,.w2, .w3{padding: 10px 15px; display: table-cell; vertical-align: middle; text-align: left;}
+          .aboutus_page  .w2{width:48px;background-color:#68A8b2;height:100%;}
+          .aboutus_page  .w3{text-align: right;}
+          .aboutus_page  .panel-title a{display: table; width:100%;}
+          .aboutus_page  .panel-title a.collapsed .fa-minus, .panel-title a .fa-plus{display: none;}
+          .aboutus_page  .panel-title a.collapsed .fa-plus{display: inline-block !important;}
+          .aboutus_page  #carrer .img-responsive{margin: 0 auto;}
+		   
+		  .aboutus_page  #accordion .panel-heading{
+ 
+  background: -webkit-linear-gradient(left, rgb(90,148,162) ,rgb(205,226,231)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, rgb(90,148,162) ,rgb(205,226,231)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, rgb(90,148,162) ,rgb(205,226,231)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, rgb(90,148,162) ,rgb(205,226,231)); /* Standard syntax */
+}
+ .aboutus_page  .panel-body  .bg-col{
+                background-color:#CDE2E7;
+            }
+		   .aboutus_page  .panel-body{
+                background-color:#CDE2E7;
+            }
+	/************** About Us EN *************/ 
+	
+.tbl-text-left *{text-align:left !important;}
+.tbl-text-center{text-align:center !important;}
+
+
+/*** ALL GET QUOTE ST ***/
+.allgetquotes h1,.allgetquotes h4{text-align:center;color:#f6732b;font-weight:400; padding-top:40px;}
+.allgetquotes h4{color:#444;padding:0;margin-top:0px;}
+.allgetquotes .heading p {padding:10px;background:#f6732b;color:#fff;margin-bottom: 0;font-weight:bold;font-size: 20px;}
+.allgetquotes  .section_quote{border:1px solid #f6732b }
+.allgetquotes .heading >div{position: absolute; z-index: 100000;left: 10%;top: 19%;border: 1px solid #fff;padding:8px;background: #fff;border-radius:50%;}
+.allgetquotes  .section_quote>p:first-child{font-weight:bold;margin-bottom:0px;font-size: 15px;}
+.allgetquotes  .section_quote p{margin:10px 0 30px 0;}
+.allgetquotes  .section_quote .btn-orange{background:#f6732b; color:#fff;font-weight:bold; margin-bottom:20px;}
+.allgetquotes  .section_quote .btn-orange a{color:#fff;}
+.allgetquotes  .section_quote .btn-orange a:focus{text-decoration:none;}
+@media (max-width: 480px) {.allgetquotes .heading >div{left: 8%;top: -15%; border:1px solid #f6732b;}
+                           .allgetquotes  .section_quote{margin-bottom:40px;}
+                           .allgetquotes .heading p{font-size:18px;}
+}
+@media (min-width:481px)and (max-width:980px){
+    .allgetquotes .heading >div{left: 8%;top: -12%; border:1px solid #f6732b;}
+}
+ /*** ALL GET QUOTE EN ***/
+ 
+/*** CALL TO ACTION WIDGET ST ***/
+.call-to-action.stickers .sticky-cms{width:300px;}
+.call-to-action.stickers .sticky-cms ul{padding:0px 15px;}
+.call-to-action.stickers .sticky-cms .panel-title a{font-size:14px;}
+.call-to-action.stickers .sticky-cms .block{border: 2px solid #fff;}
+.call-to-action.stickers .stick a .plus{display:none;}
+.call-to-action.stickers .stick a .minus {display:block; margin-top: -5px; font-size: 37px;}
+.call-to-action.stickers .stick a.collapsed .plus {display:block;margin-top: -4px;}
+.call-to-action.stickers .stick a.collapsed .minus {display:none;}
+.call-to-action.stickers .sticky-cms .call-us {padding:5px 90px;margin-bottom:0;}
+.call-to-action .subscribe-btn:last-child {padding:5px 76px;}
+.call-to-action label.error {display: none !important;}
+.call-to-action .form-control.error {border: 1px solid red;}
+.call-to-action.stickers .contact_number a{color: #ff5d24;font-size: 16px;font-weight: 700}
+.call-to-action .frm-details h3 {color: #ff5d24;}
+/*** CALL TO ACTION WIDGET EN ***/
+
+/***blog-calculator ST***/
+.blog-calc {padding: 14px 0;border: 2px solid #ccc;border-radius: 4px;margin: 10px 0;background-color:#f7f7f7;}
+.blog-calc .form-group {padding:10px 0;position:relative;}
+.blog-calc .form-group span {position: absolute;top: 8px;left: 29px;font-size: 12px;padding-top: 1px;color:#b1b1b1;transform: translateY(18%)}
+.blog-calc .form-control {min-height:45px;min-width: 225px;font-size: 18px;color: #666666;font-weight: 600;margin: 0px 15px;}
+.blog-calc .form-control.ng-valid-required {padding-bottom: 0;padding-top: 12px;}
+.blog-calc ::-webkit-input-placeholder {font-size:14px;font-weight:normal;}
+.blog-calc.invalid-form .form-control.ng-invalid-required {border:1px solid red;}
+.blog-calc .btn.btn-success {background-color:#fea30a;border-color:#fea30a;font-size: 16px;line-height: 1.94;margin: 0px 15px;}
+
+.blog-calc .final-amt h3,.blog-calc .final-amt h5 {margin: 0;text-align: left;color: #fea30a;font-weight: 800;}
+.blog-calc .final-amt h3 {font-size: 20px;}
+.blog-calc .final-amt h5 {font-weight: 600;}
+.blog-calc input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.blog-calc .final-amt{
+    min-width: 114px;
+    height: 45px;
+    padding: 4px 14px;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 7px 2px rgba(165, 165, 165, 0.75);
+    -moz-box-shadow: 1px 1px 7px 2px rgba(165, 165, 165, 0.75);
+    box-shadow: 1px 1px 7px 2px rgba(165, 165, 165, 0.75);
+    margin: 0px 15px;
+}
+@media( max-width : 768px ) {   
+    .blog-calc .form-control {
+        margin:0 auto;
+    }
+    .blog-calc {
+        padding:14px 15px;
+    }
+    .blog-calc .form-group span {
+        left:15px;    
+        }
+    .blog-calc .final-amt h3, .blog-calc .final-amt h5 {
+        text-align:center;    
+        }
+}
+/***blog-calculator EN***/
+
+.memberddl + .dropdown-menu{max-height: 250px; overflow: auto;}
