@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://localhost/DIGITALRTOPLATFORM/index.php -->
+<html lang="zxx"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>DIGITAL RTO PLATFORM</title>
+    <!--meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="RTO Management System">
+    <script>
+      addEventListener("load", function () {
+      	setTimeout(hideURLbar, 0);
+      }, false);
+      
+      function hideURLbar() {
+      	window.scrollTo(0, 1);
+      }
+    </script>
+    <!--//meta tags ends here-->
+    <!--booststrap-->
+    <link href="./DIGITAL RTO PLATFORM_files/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <!--//booststrap end-->
+    <!-- font-awesome icons -->
+    <link href="./DIGITAL RTO PLATFORM_files/fontawesome-all.min.css" rel="stylesheet" type="text/css" media="all">
+    <!-- //font-awesome icons -->
+    <link href="./DIGITAL RTO PLATFORM_files/blast.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./DIGITAL RTO PLATFORM_files/style10.css">
+    <!--stylesheets-->
+    <link href="./DIGITAL RTO PLATFORM_files/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./DIGITAL RTO PLATFORM_files/validationcss.css" rel="stylesheet" type="text/css" media="all">
+    <!--//stylesheets-->
+    <link href="./DIGITAL RTO PLATFORM_files/css" rel="stylesheet">
+    <link href="./DIGITAL RTO PLATFORM_files/css(1)" rel="stylesheet">
+	<link href="./DIGITAL RTO PLATFORM_files/jquery.dataTables.min.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+
+<style>
+#mmenu, #mmenu ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+#mmenu {
+width: 100%;
+
+border: 1px solid #222;
+background-color: #111;
+background-image: -moz-linear-gradient(#444, #111); 
+background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#111)); 
+background-image: -webkit-linear-gradient(#444, #111); 
+background-image: -o-linear-gradient(#444, #111);
+background-image: -ms-linear-gradient(#444, #111);
+background-image: linear-gradient(#444, #111);
+-moz-border-radius: 6px;
+-webkit-border-radius: 6px;
+border-radius: 6px;
+-moz-box-shadow: 0 1px 1px #777, 0 1px 0 #666 inset;
+-webkit-box-shadow: 0 1px 1px #777, 0 1px 0 #666 inset;
+box-shadow: 0 1px 1px #777, 0 1px 0 #666 inset;
+}
+#mmenu:before,
+#mmenu:after {
+content: "";
+display: table;
+}
+#mmenu:after {
+clear: both;
+}
+#mmenu {
+zoom:1;
+}
+#mmenu li {
+float: left;
+border-right: 1px solid #222;
+-moz-box-shadow: 1px 0 0 #444;
+-webkit-box-shadow: 1px 0 0 #444;
+box-shadow: 1px 0 0 #444;
+position: relative;
+}
+#mmenu a {
+float: left;
+padding: 12px 30px;
+color: #999;
+text-transform: uppercase;
+font: bold 12px Arial, Helvetica;
+text-decoration: none;
+text-shadow: 0 1px 0 #000;
+}
+#mmenu li:hover > a {
+color: #fafafa;
+}
+*html #mmenu li a:hover { /* IE6 only */
+color: #fafafa;
+}
+#mmenu ul {
+margin: 20px 0 0 0;
+_margin: 0; /*IE6 only*/
+opacity: 0;
+visibility: hidden;
+position: absolute;
+top: 38px;
+left: 0;
+z-index: 9999; 
+background: #444; 
+background: -moz-linear-gradient(#444, #111);
+background-image: -webkit-gradient(linear, left top, left bottom, from(#444), to(#111));
+background: -webkit-linear-gradient(#444, #111); 
+background: -o-linear-gradient(#444, #111); 
+background: -ms-linear-gradient(#444, #111); 
+background: linear-gradient(#444, #111);
+-moz-box-shadow: 0 -1px rgba(255,255,255,.3);
+-webkit-box-shadow: 0 -1px 0 rgba(255,255,255,.3);
+box-shadow: 0 -1px 0 rgba(255,255,255,.3); 
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+-webkit-transition: all .2s ease-in-out;
+-moz-transition: all .2s ease-in-out;
+-ms-transition: all .2s ease-in-out;
+-o-transition: all .2s ease-in-out;
+transition: all .2s ease-in-out; 
+} 
+#mmenu li:hover > ul {
+opacity: 1;
+visibility: visible;
+margin: 0;
+}
+#mmenu ul ul {
+top: 0;
+left: 150px;
+margin: 0 0 0 20px;
+_margin: 0; /*IE6 only*/
+-moz-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+-webkit-box-shadow: -1px 0 0 rgba(255,255,255,.3);
+box-shadow: -1px 0 0 rgba(255,255,255,.3); 
+}
+#mmenu ul li {
+float: none;
+display: block;
+border: 0;
+_line-height: 0; /*IE6 only*/
+-moz-box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+-webkit-box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+}
+#mmenu ul li:last-child { 
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none; 
+}
+#mmenu ul a { 
+padding: 10px;
+width: 130px;
+_height: 10px; /*IE6 only*/
+display: block;
+white-space: nowrap;
+float: none;
+text-transform: none;
+}
+#mmenu ul a:hover {
+background-color: #0186ba;
+background-image: -moz-linear-gradient(#04acec, #0186ba); 
+background-image: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba));
+background-image: -webkit-linear-gradient(#04acec, #0186ba);
+background-image: -o-linear-gradient(#04acec, #0186ba);
+background-image: -ms-linear-gradient(#04acec, #0186ba);
+background-image: linear-gradient(#04acec, #0186ba);
+}
+#mmenu ul li:first-child > a {
+-moz-border-radius: 3px 3px 0 0;
+-webkit-border-radius: 3px 3px 0 0;
+border-radius: 3px 3px 0 0;
+}
+#mmenu ul li:first-child > a:after {
+content: '';
+position: absolute;
+left: 40px;
+top: -6px;
+border-left: 6px solid transparent;
+border-right: 6px solid transparent;
+border-bottom: 6px solid #444;
+}
+#mmenu ul ul li:first-child a:after {
+left: -6px;
+top: 50%;
+margin-top: -6px;
+border-left: 0; 
+border-bottom: 6px solid transparent;
+border-top: 6px solid transparent;
+border-right: 6px solid #3b3b3b;
+}
+#mmenu ul li:first-child a:hover:after {
+border-bottom-color: #04acec; 
+}
+#mmenu ul ul li:first-child a:hover:after {
+border-right-color: #0299d3; 
+border-bottom-color: transparent; 
+}
+#mmenu ul li:last-child > a {
+-moz-border-radius: 0 0 3px 3px;
+-webkit-border-radius: 0 0 3px 3px;
+border-radius: 0 0 3px 3px;
+}
+</style>
+
+<div id="mmenu">
+
+
+</div>
+  
+    <div class="blast-box" unselectable="on" style="user-select: none;">
+      <div class="blast-frame">
+        <p>change colors</p>
+        <div class="blast-colors">
+          <div class="blast-color" style="background-color: rgb(134, 188, 66);">#86bc42</div>
+          <div class="blast-color" style="background-color: rgb(131, 115, 206);">#8373ce</div>
+          <div class="blast-color" style="background-color: rgb(20, 212, 244);">#14d4f4</div>
+          <div class="blast-color" style="background-color: rgb(114, 40, 75);">#72284b</div>
+        </div>
+        <p class="blast-custom-colors">Custom colors</p>
+        <input type="color" name="blastCustomColor" value="#cf2626">
+      </div>
+    </div>
+    <div class="header-outs" id="header">
+      <div class="header-w3layouts">
+        <div class="container">
+          <div class="row headder-contact">
+            <div class="col-lg-6 col-md-7 col-sm-9 info-contact-agile">
+              <ul>
+                <li>
+                  <span class="fas fa-phone-volume"></span>
+                  <p>+(080)5555 6666</p>
+                </li>
+                <li>
+                  <span class="fas fa-envelope"></span>
+                  <p><a href="mailto:info@example.com">info@gowdagroups.com</a></p>
+                </li>
+                <li>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 col-md-5 col-sm-3 icons px-0">
+              <ul>
+                <li><a href="http://localhost/DIGITALRTOPLATFORM/index.php#"><span class="fab fa-facebook-f"></span></a></li>
+                <li><a href="http://localhost/DIGITALRTOPLATFORM/index.php#"><span class="fas fa-envelope"></span></a></li>
+                <li><a href="http://localhost/DIGITALRTOPLATFORM/index.php#"><span class="fas fa-rss"></span></a></li>
+                <li><a href="http://localhost/DIGITALRTOPLATFORM/index.php#"><span class="fab fa-twitter"></span></a></li>
+                <li><a href="http://localhost/DIGITALRTOPLATFORM/index.php#"><span class="fab fa-pinterest-p"></span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="hedder-up">
+            <h1><a href="http://localhost/DIGITALRTOPLATFORM/index.php" class="navbar-brand" data-blast="color">DIGITAL RTO PLATFORM</a></h1>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="headdser-nav-color" data-blast="bgColor">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">			
+<ul class="navbar-nav ">
+	<li class="nav-item    active ">
+	  <a class="nav-link" href="http://localhost/DIGITALRTOPLATFORM/index.php">Home</a>
+	</li>
+	<li class="nav-item   ">
+	  <a href="http://localhost/DIGITALRTOPLATFORM/about.php" class="nav-link">About</a>
+	</li>
+		<li class="nav-item   ">
+	  <a href="http://localhost/DIGITALRTOPLATFORM/userregister.php" class="nav-link">Register</a>
+	</li>
+	<li class="nav-item   ">
+	  <a href="http://localhost/DIGITALRTOPLATFORM/userlogin.php" class="nav-link">login</a>
+	</li>
+		<li class="nav-item   ">
+	  <a href="http://localhost/DIGITALRTOPLATFORM/contact.php" class="nav-link">Contact</a>
+	</li>
+</ul>
+            </div>
+          </div>
+        </nav>
+        <!--//navigation section -->
+        <div class="clearfix"> </div>
+      </div>      <!--banner -->
+      <!-- Slideshow 4 -->
+      <div class="slider">
+        <div class="callbacks_container">
+          <ul class="rslides callbacks callbacks1" id="slider4">
+            <li id="callbacks1_s0" class="callbacks1_on" style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 900ms ease-in-out;">
+              <div class="slider-img one-img">
+                <div class="container">
+                  <div class="slider-info text-left">
+                    <h4>Think about safety first then drive.</h4>
+                    <h5>DIGITAL RTO PLATFORM</h5>
+                    <p>Follow road safety rules!
+                    </p>
+                    <div class="outs_more-buttn">
+                      <a href="http://localhost/DIGITALRTOPLATFORM/about.php" data-blast="bgColor">More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="callbacks1_s1" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 900ms ease-in-out;">
+              <div class="slider-img two-img">
+                <div class="container">
+                  <div class="slider-info text-left">
+                    <h4>Be sure to tie seat belt before driving the car.</h4>
+                    <h5>DIGITAL RTO PLATFORM</h5>
+                    <p>Be alert to save your life.
+                    </p>
+                    <div class="outs_more-buttn">
+                      <a href="http://localhost/DIGITALRTOPLATFORM/about.php" data-blast="bgColor">More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li id="callbacks1_s2" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 900ms ease-in-out;">
+              <div class="slider-img three-img">
+                <div class="container">
+                  <div class="slider-info text-left">
+                    <h4>Fast driving is prohibited, follow it!</h4>
+                    <h5>DIGITAL RTO PLATFORM</h5>
+                    <p>Be a best driver to be a good survivor.
+                    </p>
+                    <div class="outs_more-buttn">
+                      <a href="http://localhost/DIGITALRTOPLATFORM/about.php" data-blast="bgColor">More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul><a href="http://localhost/DIGITALRTOPLATFORM/index.php#" class="callbacks_nav callbacks1_nav prev">Previous</a><a href="http://localhost/DIGITALRTOPLATFORM/index.php#" class="callbacks_nav callbacks1_nav next">Next</a>
+        </div>
+        <!-- This is here just to demonstrate the callbacks -->
+        <!-- <ul class="events">
+          <li>Example 4 callback events</li>
+          </ul>-->
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <!-- //banner -->
+    <!--about-->
+    <section class="pt-md-5 pt-sm-4 pt-3">
+      <div class="container-fluid ">
+        <div class="main row ">
+          <!-- TENTH EXAMPLE -->
+          <div class="col-lg-4 view view-tenth">
+            <img src="./DIGITAL RTO PLATFORM_files/registerimage.jpg" alt="" class="img-fluid">
+            <div class="mask">
+              <h3 data-blast="bgColor">Register</h3>
+              <p>Kindly enter profile details for registration..</p>
+              <a href="http://localhost/DIGITALRTOPLATFORM/userregister.php" class="info" data-blast="bgColor">Click here to Register</a>
+            </div>
+          </div>
+          <div class="col-lg-4 view view-tenth">
+            <img src="./DIGITAL RTO PLATFORM_files/loginimage.jpg" alt="" class="img-fluid">
+            <div class="mask">
+              <h3 data-blast="bgColor">Login</h3>
+              <p>Existing customers can login to the website by entering Login credentials.</p>
+              <a href="http://localhost/DIGITALRTOPLATFORM/userlogin.php" class="info">Click here to Login</a>
+            </div>
+          </div>
+          <div class="col-lg-4 view view-tenth">
+            <img src="./DIGITAL RTO PLATFORM_files/license.png" alt="" class="img-fluid">
+            <div class="mask">
+              <h3 data-blast="bgColor">Application Status</h3>
+              <p>In this section you can view LLR, DL, Vehicle Registration Application status...</p>
+              <a href="http://localhost/DIGITALRTOPLATFORM/trackstatus.php" class="info" data-blast="bgColor">Click here to Check</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+        <!--Horizontal Tab-->
+        <div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+          <ul class="resp-tabs-list justify-content-center">
+            <li data-blast="bgColor" class="resp-tab-item resp-tab-active" aria-controls="tab_item-0" role="tab">Learners License</li>
+            <li data-blast="bgColor" class="resp-tab-item" aria-controls="tab_item-1" role="tab">Driving License</li>
+            <li data-blast="bgColor" class="resp-tab-item" aria-controls="tab_item-2" role="tab">Vehicle Registration</li>
+            <li data-blast="bgColor" class="resp-tab-item" aria-controls="tab_item-3" role="tab">Driving License Renewal</li>
+          </ul>
+          <div class="resp-tabs-container">
+            <h2 class="resp-accordion resp-tab-active" role="tab" aria-controls="tab_item-0"><span class="resp-arrow"></span>Learners License</h2><div class="tab1 resp-tab-content resp-tab-content-active" style="display:block" aria-labelledby="tab_item-0">
+              <div class="row mt-lg-4 mt-3">
+                <div class="col-md-7 latest-list">
+                  <div class="about-jewel-agile-left">
+                    <h4 class="mb-3" data-blast="color">LLR Application</h4>
+                    <p>Drivers Need To Get Their Hands On A Learners License Before They Begin Practising Driving. First user needs to apply for learning license. After applying learning license those detail stores in llr table. After entering detail, the user needs to pay for learning license. From the employee end employee needs to take test to approve learning license. The test detail stores in test table. After the test the employee can verify or reject LLR application.</p>
+                    <h5 data-blast="color">Learners License</h5>
+                  </div>
+                </div>
+                <div class="col-md-5 about-txt-img">
+                  <img src="./DIGITAL RTO PLATFORM_files/llr.png" class="img-thumbnail" alt="">
+                </div>
+              </div>
+            </div>
+            <h2 class="resp-accordion" role="tab" aria-controls="tab_item-1"><span class="resp-arrow"></span>Driving License</h2><div class="tab2 resp-tab-content" aria-labelledby="tab_item-1">
+              <div class="row mt-lg-4 mt-3">
+                <div class="col-md-5 about-txt-img">
+                  <img src="./DIGITAL RTO PLATFORM_files/dl.jpg" class="img-thumbnail" style="width:100%;height:260px;" alt="">
+                </div>
+                <div class="col-md-7 latest-list">
+                  <div class="about-jewel-agile-left">
+                    <h4 class="mb-3" data-blast="color">Driving License Application</h4>
+                    <p>First user needs to apply for Driving license . After entering detail, the user needs to pay for Driving license and payment detail stores in payment table. From the employee end employee needs to take test for driving license. After the test the employee can verify or reject Driving license application. All People Should Have Valid Licenses When Driving In A Public Space. They Need To Have Their Own License..</p>
+                    <h5 data-blast="color">Driving License</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="resp-accordion" role="tab" aria-controls="tab_item-2"><span class="resp-arrow"></span>Vehicle Registration</h2><div class="tab3 resp-tab-content" aria-labelledby="tab_item-2">
+              <div class="row mt-lg-4 mt-3">
+                <div class="col-md-7 latest-list">
+                  <div class="about-jewel-agile-left">
+                    <h4 class="mb-3" data-blast="color">Vehicle Registration Application</h4>
+                    <p>From the customer end customer will apply for new vehicle registration.  After filling vehicle registration detail user needs to pay vehicle registration fee. Fee payment detail stores in payment table. Admin will check all the vehicle registration details and he verifies the detail for approval...</p>
+                    <h5 data-blast="color">Vehicle Registration</h5>
+                  </div>
+                </div>
+                <div class="col-md-5 about-txt-img">
+                  <img src="./DIGITAL RTO PLATFORM_files/vehicleregistration.png" style="width:100%;height:260px;" class="img-thumbnail" alt="">
+                </div>
+              </div>
+            </div>
+            <h2 class="resp-accordion" role="tab" aria-controls="tab_item-3"><span class="resp-arrow"></span>Driving License Renewal</h2><div class="tab4 resp-tab-content" aria-labelledby="tab_item-3">
+              <div class="row mt-lg-4 mt-3">
+                <div class="col-md-5 about-txt-img">
+                  <img src="./DIGITAL RTO PLATFORM_files/dlrenew.jpg" class="img-thumbnail" alt="">
+                </div>
+                <div class="col-md-7 latest-list">
+                  <div class="about-jewel-agile-left">
+                    <h4 class="mb-3" data-blast="color"> Driving License Renewal Application</h4>
+                    <p>User needs to apply to renew his existing driving license. After applying the renewal application stores in driving_license table. After applying the user needs pay renewal charge which stores in payment table.  Admin will verify the license renewal application and he will verify/reject license renewal document...</p>
+                    <h5 data-blast="color">Driving License Renewal</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--//about-->
+    <!--service-->
+    <section class="service py-lg-4 py-md-3 py-sm-3 py-3" id="service">
+      <div class="container py-lg-5 py-md-5 py-sm-4 py-3">
+        <h3 class="title clr text-center mb-lg-5 mb-md-4  mb-sm-4 mb-3">Services</h3>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center">
+            <div class="white-shadow">
+              <div class="text-wls-ser-bake">
+                <span class="fas fa-book banner-icon" data-blast="color"></span>
+              </div>
+              <div class="ser-inner-info">
+                <h4 class="my-3">Learners License(LLR)</h4>
+                <p>Drivers Need To Get Their Hands On A Learners License Before They Begin Practising Driving...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center">
+            <div class="white-shadow">
+              <div class="text-wls-ser-bake">
+                <span class="fas fa-pencil-alt banner-icon" data-blast="color"></span>
+              </div>
+             <div class="ser-inner-info">
+                <h4 class="my-3">Driving License</h4>
+                <p>All People Should Have Valid Licenses When Driving In A Public Space. They Need To Have Their Own License..</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center">
+            <div class="white-shadow">
+              <div class="text-wls-ser-bake">
+                <span class="fas fa-bookmark banner-icon" data-blast="color"></span>
+              </div>
+              <div class="ser-inner-info">
+                <h4 class="my-3">Vehicle Registration</h4>
+                <p>The Vehicle Has To Be Registered With The RTO Before It Receives The Go-Ahead To Be Driven On The Road...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center mt-md-4 mt-sm-3 mt-3">
+            <div class="white-shadow">
+              <div class="text-wls-ser-bake">
+                <span class="fas fa-address-book banner-icon" data-blast="color"></span>
+              </div>
+              <div class="ser-inner-info">
+                <h4 class="my-3">Address Modify </h4>
+                <p>If Vehicle Owners Are Changing Their Addresses, They Have To Make This Change On The Vehicle Documents.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center mt-md-4 mt-sm-3 mt-3">
+            <div class="white-shadow">
+              <div class="text-wls-ser-bake">
+                <span class="fas fa-graduation-cap banner-icon" data-blast="color"></span>
+              </div>
+              <div class="ser-inner-info">
+                <h4 class="my-3">Driving License Renewal</h4>
+                <p>Driver’s Licenses Have An Expiration Date And Need To Be Renewed  after the verification....</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-6 w3layouts-service-list text-center mt-md-4 mt-sm-3 mt-3">
+            <div class="white-shadow">
+              <div class="text-wls-ser-bake">
+                <span class="fab fa-cloudscale banner-icon" data-blast="color"></span>
+              </div>
+              <div class="ser-inner-info">
+                <h4 class="my-3">Vehicle Insurance </h4>
+                <p>Company which offers comprehensive motor/vehicle insurance policies for car, two wheeler and commercial vehicles....</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--//service-->
+
+    <!--footer-->
+		<div class="nav-footer py-sm-4 py-3">
+      <div class="container-fluid">
+        <div class="buttom-nav ">
+          <nav class="border-line py-2">
+            <ul class="nav justify-content-center">
+              <li class="nav-item active">
+                <a class="nav-link" href="http://localhost/DIGITALRTOPLATFORM/emplogin.php">Employee Login <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+		
+    <footer class="py-3">
+      <div class="container">
+        <div class="copy-agile-right text-center">
+          <p> 
+            © 2025 RTO Management System. All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--//footer-->
+
+    <!--js working-->
+    <script src="./DIGITAL RTO PLATFORM_files/jquery-2.2.3.min.js.download"></script>
+    <!--//js working--> 
+    <!--blast colors change-->
+    <script src="./DIGITAL RTO PLATFORM_files/blast.min.js.download"></script>
+    <!--//blast colors change-->
+    <!--responsiveslides banner-->
+    <script src="./DIGITAL RTO PLATFORM_files/responsiveslides.min.js.download"></script>
+    <script>
+      // You can also use "$(window).load(function() {"
+      $(function () {
+      	// Slideshow 4
+      	$("#slider4").responsiveSlides({
+      		auto: true,
+      		pager:false,
+      		nav:true ,
+      		speed: 900,
+      		namespace: "callbacks",
+      		before: function () {
+      			$('.events').append("<li>before event fired.</li>");
+      		},
+      		after: function () {
+      			$('.events').append("<li>after event fired.</li>");
+      		}
+      	});
+      
+      });
+    </script>
+    <!--// responsiveslides banner-->		  
+    <!--responsive tabs-->	 
+    <script src="./DIGITAL RTO PLATFORM_files/easy-responsive-tabs.js.download"></script>
+    <script>
+      $(document).ready(function () {
+      $('#horizontalTab').easyResponsiveTabs({
+      type: 'default', //Types: default, vertical, accordion           
+      width: 'auto', //auto or any width like 600px
+      fit: true,   // 100% fit in a container
+      closed: 'accordion', // Start closed if in accordion view
+      activate: function(event) { // Callback function if tab is switched
+      var $tab = $(this);
+      var $info = $('#tabInfo');
+      var $name = $('span', $info);
+      $name.text($tab.text());
+      $info.show();
+      }
+      });
+      });
+       
+    </script>
+    <!--// responsive tabs-->	
+    <!--About OnScroll-Number-Increase-JavaScript -->
+    <script src="./DIGITAL RTO PLATFORM_files/jquery.waypoints.min.js.download"></script>
+    <script src="./DIGITAL RTO PLATFORM_files/jquery.countup.js.download"></script>
+    <script>
+      $('.counter').countUp();
+    </script>
+    <!-- //OnScroll-Number-Increase-JavaScript -->	  
+    <!-- start-smoth-scrolling -->
+    <script src="./DIGITAL RTO PLATFORM_files/move-top.js.download"></script>
+    <script src="./DIGITAL RTO PLATFORM_files/easing.js.download"></script>
+    <script>
+      jQuery(document).ready(function ($) {
+      	$(".scroll").click(function (event) {
+      		event.preventDefault();
+      		$('html,body').animate({
+      			scrollTop: $(this.hash).offset().top
+      		}, 900);
+      	});
+      });
+    </script>
+    <!-- start-smoth-scrolling -->
+    <!-- here stars scrolling icon -->
+    <script>
+      $(document).ready(function () {
+      
+      	var defaults = {
+      		containerID: 'toTop', // fading element id
+      		containerHoverID: 'toTopHover', // fading element hover id
+      		scrollSpeed: 1200,
+      		easingType: 'linear'
+      	};
+      
+      
+      	$().UItoTop({
+      		easingType: 'easeOutQuart'
+      	});
+      
+      });
+    </script>
+    <!-- //here ends scrolling icon -->
+    <!--bootstrap working-->
+    <script src="./DIGITAL RTO PLATFORM_files/bootstrap.min.js.download"></script>
+    <!-- //bootstrap working-->
+	 <script src="./DIGITAL RTO PLATFORM_files/jquery.dataTables.min.js.download"></script>
+<a href="http://localhost/DIGITALRTOPLATFORM/index.php#" id="toTop" style="display: none;"><span id="toTopHover"></span>To Top</a></body></html>
